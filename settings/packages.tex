@@ -47,3 +47,12 @@
 
 % водяной знак на документе, см. main.tex
 \usepackage[printwatermark]{xwatermark}
+
+% Set fallback font
+\newcommand*{\fallbackfont}{\fontfamily{Sans Serif}\selectfont}
+
+% Fallback in different cases (юзаем другие шрифты если все плохо)
+\usepackage{unicode-math}
+\usepackage{newunicodechar}
+\newunicodechar{№}{{\fallbackfont №}}
+
