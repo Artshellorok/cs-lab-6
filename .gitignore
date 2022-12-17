@@ -23,4 +23,6 @@
 *.out
 *.synctex.gz
 *.toc
+*.xwm
+*.run.xml
 
