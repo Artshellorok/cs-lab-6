@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.12.15)  17 DEC 2022 13:14
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.12.15)  17 DEC 2022 22:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2442,12 +2442,6 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-
-Package biblatex Warning: citation 'bash'
-(biblatex)                was not found at all in the .bbl file,
-(biblatex)                bibliography labels cannot be generated,
-(biblatex)                please correct the citation.
-
 Package biblatex Info: Reference section=0 on input line 16.
 Package biblatex Info: Reference segment=0 on input line 16.
 *geometry* driver: auto-detecting
@@ -2831,27 +2825,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--63
 []\TU/CMUSerif(2)/m/n/12 Верхняя граница
  []
 
-Missing character: There is no ≤ (U+2264) in font CMU Serif Roman/OT:script=cyr
-l;language=dflt;!
-Missing character: There is no ≤ (U+2264) in font CMU Serif Roman/OT:script=cyr
-l;language=dflt;!
-Missing character: There is no ≤ (U+2264) in font CMU Serif Roman/OT:script=cyr
-l;language=dflt;!
-Missing character: There is no ≤ (U+2264) in font CMU Serif Roman/OT:script=cyr
-l;language=dflt;!
-
-LaTeX Warning: Citation 'bash' on page 5 undefined on input line 74.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-File: fig/sample.png Graphic file (type bmp)
-<fig/sample.png>
-[5] [6]
-(./_minted-main/9CDA1C7A87F290FE855D8D160538B53560B3CC707215DD39DCEDDD36B4A396F
-E.pygtex
+Missing character: There is no и ("438) in font cmmi12!
+[5]
+(./_minted-main/4FFED4F73DE1520E189D1CC3B468331DD678517B6AD9F9EB3F0C86148F191DB
+F.pygtex
 
 LaTeX Font Warning: Font shape `TU/FiraCode-Regular.otf(2)/m/n' in size <6> not
  available
@@ -2862,9 +2839,37 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 30.
 )
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 137.
- [7]) [8]
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
+
+ []
+
+File: fig/laba5.png Graphic file (type bmp)
+<fig/laba5.png>
+File: fig/laba6.png Graphic file (type bmp)
+<fig/laba6.png>
+File: fig/laba7.png Graphic file (type bmp)
+<fig/laba7.png>
+File: fig/laba8.png Graphic file (type bmp)
+<fig/laba8.png>
+File: fig/laba9.png Graphic file (type bmp)
+<fig/laba9.png>
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
+[]\TU/CMUSerif(2)/m/n/12 Нижняя граница
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
+[]\TU/CMUSerif(2)/m/n/12 Верхняя граница
+ []
+
+[7] [8])
+Overfull \hbox (2.22696pt too wide) in paragraph at lines 129--25
+[]\TU/CMUSerif(2)/m/n/12 Подход динамического программирования чем-то похож на 
+модель «разделяй и власт-
+ []
+
+[9]
 \openout2 = `templates/bibpage.aux'.
 
  (./templates/bibpage.tex
@@ -2977,10 +2982,19 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {en-NZ}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
+
+
+Package caption Warning: Unused \captionsetup[figure] on input line 49.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[table] on input line 53.
+See the caption package documentation for explanation.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 29.
- (./main.xwm) (./main.aux (./templates/titlepage.aux) (./templates/tocpage.aux)
- (./content.aux) (./templates/bibpage.aux))
+(./main.xwm) (./main.aux (./templates/titlepage.aux) (./templates/tocpage.aux)
+(./content.aux) (./templates/bibpage.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
 
@@ -2990,8 +3004,8 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 5E5EF07C2F9BEDCDD45D75E6E26AE55B;1539
-(rerunfilecheck)             After:  0FDAE829A0D9F7C1F6EED0F97A55A352;1983.
+(rerunfilecheck)             Before: E6F3430D016608E6BFD3AD302E2CE408;1084
+(rerunfilecheck)             After:  A1BD3228B188BFF4C69F12BBFB9CED52;1044.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.0pt have occurred.
@@ -3012,12 +3026,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49183 strings out of 476156
- 931431 string characters out of 5814962
- 1953960 words of memory out of 5000000
- 69176 multiletter control sequences out of 15000+600000
- 473661 words of font info for 98 fonts, out of 8000000 for 9000
+ 49032 strings out of 476156
+ 928143 string characters out of 5814962
+ 1953272 words of memory out of 5000000
+ 69026 multiletter control sequences out of 15000+600000
+ 473653 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 68i,9n,114p,823b,4983s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,9n,114p,823b,3904s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (8 pages).
+Output written on main.pdf (9 pages).

@@ -2,11 +2,5 @@
 \contentsline {section}{\numberline {1}Задачи по варианту}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Задача №3. Редакционное расстояние}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Задача №4. Наибольшая общая подпоследовательность}{5}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Теоретическая информация}{5}{section.2}%
-\contentsline {section}{\numberline {3}Ход выполнения работы}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Список}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Картинка}{5}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Таблицы}{6}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Листинг}{7}{subsection.3.4}%
-\contentsline {section}{Заключение}{8}{listing.caption.4}%
+\contentsline {section}{Вывод}{9}{listing.caption.2}%
 \contentsfinish 

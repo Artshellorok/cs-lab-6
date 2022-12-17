@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{time}
+\PYG{k+kn}{import} \PYG{n+nn}{tracemalloc}
+
+\PYG{n}{tracemalloc}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\PYG{n}{t\PYGZus{}start} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{perf\PYGZus{}counter}\PYG{p}{()}
+\PYG{n}{file} \PYG{o}{=} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}input.txt\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{lines} \PYG{o}{=} \PYG{n}{file}\PYG{o}{.}\PYG{n}{readlines}\PYG{p}{()}
+\PYG{n}{out} \PYG{o}{=} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}output.txt\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{lines}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])}
+\PYG{n}{a} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{,} \PYG{n}{lines}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()))}
+
+\PYG{n}{m} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{lines}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{])}
+\PYG{n}{b} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{,} \PYG{n}{lines}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()))}
+
+\PYG{n}{dp} \PYG{o}{=} \PYG{p}{[[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{m}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)]} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)]}
+
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{):}
+    \PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{m}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n}{i} \PYG{o}{==} \PYG{l+m+mi}{0} \PYG{o+ow}{or} \PYG{n}{j} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+            \PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}
+        \PYG{k}{elif} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{==} \PYG{n}{b}\PYG{p}{[}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]:}
+            \PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{j}\PYG{p}{],} \PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{])}
+
+\PYG{n}{out}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{n}\PYG{p}{][}\PYG{n}{m}\PYG{p}{]))}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Время выполнения: \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{time}\PYG{o}{.}\PYG{n}{perf\PYGZus{}counter}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{n}{t\PYGZus{}start}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} секунд\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Использование памяти: \PYGZdq{}} \PYG{o}{+}
+      \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{tracemalloc}\PYG{o}{.}\PYG{n}{get\PYGZus{}traced\PYGZus{}memory}\PYG{p}{()[}\PYG{l+m+mi}{1}\PYG{p}{])} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} байт\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{tracemalloc}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{()}
+\end{Verbatim}
