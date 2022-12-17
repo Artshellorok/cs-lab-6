@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.12.15)  16 DEC 2022 21:34
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.12.15)  17 DEC 2022 13:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2755,23 +2755,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ])
 \openout2 = `content.aux'.
 
- (./content.tex [3
+ (./content.tex
 
+LaTeX Font Warning: Font shape `TU/Sans Serif/b/n' undefined
+(Font)              using `TU/Sans Serif/m/n' instead on input line 9.
 
-]
-
-LaTeX Warning: Citation 'bash' on page 4 undefined on input line 17.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-File: fig/sample.png Graphic file (type bmp)
-<fig/sample.png>
-[4] [5] (./_minted-main/colorful.pygstyle)
-(./_minted-main/9CDA1C7A87F290FE855D8D160538B53560B3CC707215DD39DCEDDD36B4A396F
-E.pygtex
+(./_minted-main/colorful.pygstyle)
+(./_minted-main/341994D5C0AE1290E35453C4C206586B1049FC768E99EEE69A21C1957D0E429
+6.pygtex
 
 LaTeX Font Warning: Font shape `TU/FiraCode-Regular.otf(0)/m/n' in size <12> no
 t available
@@ -2800,8 +2791,67 @@ guage=dflt;+calt;"
 
 LaTeX Font Warning: Font shape `TU/FiraCode-Regular.otf(2)/b/n' undefined
 (Font)              using `TU/FiraCode-Regular.otf(2)/m/n' instead on input lin
-e 4.
+e 2.
 
+
+LaTeX Font Warning: Font shape `TU/FiraCode-Regular.otf(2)/m/n' in size <12> no
+t available
+(Font)              size <10> substituted on input line 29.
+
+[3
+
+
+])
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+File: fig/laba0.png Graphic file (type bmp)
+<fig/laba0.png>
+File: fig/laba1.png Graphic file (type bmp)
+<fig/laba1.png>
+File: fig/laba2.png Graphic file (type bmp)
+<fig/laba2.png>
+File: fig/laba3.png Graphic file (type bmp)
+<fig/laba3.png>
+File: fig/laba4.png Graphic file (type bmp)
+<fig/laba4.png>
+
+Overfull \hbox (1.06104pt too wide) in paragraph at lines 53--54
+ [][] 
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]\TU/CMUSerif(2)/m/n/12 Нижняя граница
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+[]\TU/CMUSerif(2)/m/n/12 Верхняя граница
+ []
+
+Missing character: There is no ≤ (U+2264) in font CMU Serif Roman/OT:script=cyr
+l;language=dflt;!
+Missing character: There is no ≤ (U+2264) in font CMU Serif Roman/OT:script=cyr
+l;language=dflt;!
+Missing character: There is no ≤ (U+2264) in font CMU Serif Roman/OT:script=cyr
+l;language=dflt;!
+Missing character: There is no ≤ (U+2264) in font CMU Serif Roman/OT:script=cyr
+l;language=dflt;!
+
+LaTeX Warning: Citation 'bash' on page 5 undefined on input line 74.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+File: fig/sample.png Graphic file (type bmp)
+<fig/sample.png>
+[5] [6]
+(./_minted-main/9CDA1C7A87F290FE855D8D160538B53560B3CC707215DD39DCEDDD36B4A396F
+E.pygtex
 
 LaTeX Font Warning: Font shape `TU/FiraCode-Regular.otf(2)/m/n' in size <6> not
  available
@@ -2813,8 +2863,8 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 30.
 )
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 80.
- [6]) [7]
+t line 137.
+ [7]) [8]
 \openout2 = `templates/bibpage.aux'.
 
  (./templates/bibpage.tex
@@ -2933,9 +2983,15 @@ Package atveryend Info: Executing hook `AfterLastShipout' on input line 29.
  (./content.aux) (./templates/bibpage.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 329A2B7B94F4F0BCE01A4864FA3DDEC9;1395.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 5E5EF07C2F9BEDCDD45D75E6E26AE55B;1539
+(rerunfilecheck)             After:  0FDAE829A0D9F7C1F6EED0F97A55A352;1983.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.0pt have occurred.
@@ -2956,12 +3012,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49121 strings out of 476156
- 930289 string characters out of 5814962
- 1950517 words of memory out of 5000000
- 69118 multiletter control sequences out of 15000+600000
- 473653 words of font info for 97 fonts, out of 8000000 for 9000
+ 49183 strings out of 476156
+ 931431 string characters out of 5814962
+ 1953960 words of memory out of 5000000
+ 69176 multiletter control sequences out of 15000+600000
+ 473661 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  68i,9n,114p,823b,4983s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (7 pages).
+Output written on main.pdf (8 pages).

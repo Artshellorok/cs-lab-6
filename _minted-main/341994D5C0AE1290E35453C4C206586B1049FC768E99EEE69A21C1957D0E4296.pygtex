@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kr}{import}\PYG{+w}{ }\PYG{n+nn}{time}
+\PYG{k+kr}{import}\PYG{+w}{ }\PYG{n+nn}{tracemalloc}
+
+\PYG{n+nf}{tracemalloc}\PYG{o}{.}\PYG{n}{start}\PYG{n+nb}{()}
+\PYG{n+nf}{t\PYGZus{}start}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{time}\PYG{o}{.}\PYG{n}{perf\PYGZus{}counter}\PYG{n+nb}{()}
+\PYG{n+nf}{file}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{open}\PYG{p}{(}\PYG{n}{\PYGZsq{}input}\PYG{o}{.}\PYG{n}{txt\PYGZsq{}}\PYG{p}{)}
+\PYG{n+nf}{lines}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{file}\PYG{o}{.}\PYG{n}{readlines}\PYG{n+nb}{()}
+\PYG{n+nf}{out}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{open}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}output.txt\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n+nf}{a}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{lines}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n+nf}{b}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{lines}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+\PYG{n+nf}{n}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{m}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{len}\PYG{p}{(}\PYG{n}{a}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{len}\PYG{p}{(}\PYG{n}{b}\PYG{p}{)}
+\PYG{k+kr}{if}\PYG{+w}{ }\PYG{n}{n}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{m}\PYG{k+kt}{:}
+\PYG{+w}{    }\PYG{n}{a}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{a}
+\PYG{+w}{    }\PYG{n}{n}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{m}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{m}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{n}
+
+\PYG{n+nf}{curr\PYGZus{}row}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{k+kt}{[]}
+\PYG{n+nf}{for}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{k+kr}{in}\PYG{+w}{ }\PYG{n}{range}\PYG{p}{(}\PYG{n}{n}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{k+kt}{:}
+\PYG{+w}{    }\PYG{n}{curr\PYGZus{}row}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}
+
+\PYG{n+nf}{for}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{k+kr}{in}\PYG{+w}{ }\PYG{n}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{m}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{k+kt}{:}
+\PYG{+w}{    }\PYG{n}{prev\PYGZus{}row}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{curr\PYGZus{}row}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{curr\PYGZus{}row}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{n}
+\PYG{+w}{    }\PYG{n}{for}\PYG{+w}{ }\PYG{n}{j}\PYG{+w}{ }\PYG{k+kr}{in}\PYG{+w}{ }\PYG{n}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{n}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{k+kt}{:}
+\PYG{+w}{        }\PYG{n}{move\PYGZus{}aus\PYGZus{}a}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{prev\PYGZus{}row}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{        }\PYG{n}{move\PYGZus{}aus\PYGZus{}b}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{curr\PYGZus{}row}\PYG{p}{[}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{        }\PYG{n}{fortsetzen}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{prev\PYGZus{}row}\PYG{p}{[}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{+w}{        }\PYG{k+kr}{if}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{[}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{k+kt}{:}
+\PYG{+w}{            }\PYG{n}{fortsetzen}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{        }\PYG{n}{curr\PYGZus{}row}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{+w}{ }\PYG{o+ow}{=}\PYG{+w}{ }\PYG{n}{min}\PYG{p}{(}\PYG{n}{move\PYGZus{}aus\PYGZus{}a}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{move\PYGZus{}aus\PYGZus{}b}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fortsetzen}\PYG{p}{)}
+
+\PYG{n+nf}{out}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{str}\PYG{p}{(}\PYG{n}{curr\PYGZus{}row}\PYG{p}{[}\PYG{n}{n}\PYG{p}{]))}
+
+\PYG{n+nf}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Время выполнения: \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{str}\PYG{p}{(}\PYG{n}{time}\PYG{o}{.}\PYG{n}{perf\PYGZus{}counter}\PYG{n+nb}{()}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{t\PYGZus{}start}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{} секунд\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nf}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Использование памяти: \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{      }\PYG{n}{str}\PYG{p}{(}\PYG{n}{tracemalloc}\PYG{o}{.}\PYG{n}{get\PYGZus{}traced\PYGZus{}memory}\PYG{n+nb}{()}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{} байт\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nf}{tracemalloc}\PYG{o}{.}\PYG{n}{stop}\PYG{n+nb}{()}
+\end{Verbatim}
