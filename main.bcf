@@ -3160,6 +3160,10 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">refs.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">dp</bcf:citekey>
+    <bcf:citekey order="2">divnconq</bcf:citekey>
+    <bcf:citekey order="3">dp</bcf:citekey>
+    <bcf:citekey order="4">divnconq</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ntvy">

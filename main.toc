@@ -3,4 +3,5 @@
 \contentsline {subsection}{\numberline {1.1}Задача №3. Редакционное расстояние}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Задача №4. Наибольшая общая подпоследовательность}{5}{subsection.1.2}%
 \contentsline {section}{Вывод}{9}{listing.caption.2}%
+\contentsline {section}{Список использованных источников}{10}{listing.caption.2}%
 \contentsfinish 

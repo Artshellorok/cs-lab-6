@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.12.15)  17 DEC 2022 22:17
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.12.15)  17 DEC 2022 22:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2439,11 +2439,11 @@ Package biblatex Info: Data encoding 'utf8' specified.
 \openout6 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 16.
 Package biblatex Info: Reference segment=0 on input line 16.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -2863,20 +2863,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--120
 []\TU/CMUSerif(2)/m/n/12 Верхняя граница
  []
 
-[7] [8])
-Overfull \hbox (2.22696pt too wide) in paragraph at lines 129--25
-[]\TU/CMUSerif(2)/m/n/12 Подход динамического программирования чем-то похож на 
-модель «разделяй и власт-
- []
-
-[9]
+[7] [8]) [9]
 \openout2 = `templates/bibpage.aux'.
 
- (./templates/bibpage.tex
+ (./templates/bibpage.tex) [10
 
-LaTeX Warning: Empty bibliography on input line 2.
 
-)
+]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2997,15 +2990,9 @@ Package atveryend Info: Executing hook `AfterLastShipout' on input line 29.
 (./content.aux) (./templates/bibpage.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 839CC4D8568E929F70B182CE7A76DC31;1351.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: E6F3430D016608E6BFD3AD302E2CE408;1084
-(rerunfilecheck)             After:  A1BD3228B188BFF4C69F12BBFB9CED52;1044.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.0pt have occurred.
@@ -3013,25 +3000,17 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49032 strings out of 476156
- 928143 string characters out of 5814962
- 1953272 words of memory out of 5000000
- 69026 multiletter control sequences out of 15000+600000
+ 49252 strings out of 476156
+ 932679 string characters out of 5814962
+ 1953718 words of memory out of 5000000
+ 69244 multiletter control sequences out of 15000+600000
  473653 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 68i,9n,114p,823b,3904s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,9n,114p,823b,5207s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (9 pages).
+Output written on main.pdf (10 pages).
